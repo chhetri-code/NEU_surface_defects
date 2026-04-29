@@ -67,6 +67,13 @@ with tab_camera:
     if camera_snap:
         raw_image_bytes = camera_snap.read()
 
+# ── Footer ────────────────────────────────────────────────────────────────────
+st.divider()
+st.caption(
+    "Model: MobileNetV2 fine-tuned on the [NEU Surface Defect Dataset](http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html)  |  "
+    "Framework: TensorFlow / Keras"
+)
+st.caption("Made in 🇮🇳 with ❤️ by CHHETRI")
 
 # ── Inference & results ───────────────────────────────────────────────────────
 if raw_image_bytes is None:
@@ -171,11 +178,3 @@ with st.expander("ℹ️  About the defect classes"):
         dot = f"<span style='color:{CLASS_COLOURS[cls]};font-size:1.1rem;'>●</span>"
         st.markdown(f"{dot} &nbsp; **{cls}** — {desc}", unsafe_allow_html=True)
 
-
-# ── Footer ────────────────────────────────────────────────────────────────────
-st.divider()
-st.caption(
-    "Model: MobileNetV2 fine-tuned on the [NEU Surface Defect Dataset](http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html)  |  "
-    "Framework: TensorFlow / Keras"
-)
-st.caption("Made in 🇮🇳 with ❤️ by CHHETRI")
