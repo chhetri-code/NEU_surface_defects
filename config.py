@@ -28,6 +28,6 @@ IMAGENET_MEAN: list[float] = [0.485, 0.456, 0.406]
 IMAGENET_STD:  list[float] = [0.229, 0.224, 0.225]
 
 # --------------- UI / display -------------------------------------------------
-APP_TITLE:    str = "NEU Surface Defect Classifier using MobilenetV2 with Custom Head"
+APP_TITLE:    str = "NEU Surface Defect Classifier"
 APP_SUBTITLE: str = "Upload or capture a steel-surface image"
 TOP_K:        int = 3          # how many top predictions to show
