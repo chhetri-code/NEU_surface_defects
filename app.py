@@ -177,5 +177,5 @@ st.divider()
 st.caption(
     "Model: MobileNetV2 fine-tuned on the [NEU Surface Defect Dataset](http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html)  |  "
     "Framework: TensorFlow / Keras"
-    "Made in 🇮🇳 with ❤️ by CHHETRI"
 )
+st.caption("Made in 🇮🇳 with ❤️ by CHHETRI")
