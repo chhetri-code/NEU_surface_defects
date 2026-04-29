@@ -21,7 +21,7 @@ NUM_CLASSES: int = len(CLASS_NAMES)
 # Export from the notebook with:
 #     model.save("neu_defect_model.keras")
 # then copy the file next to this project.
-MODEL_PATH: str = "neu_defect_model.keras"
+MODEL_PATH: str = "model/neu_defect_model.keras"
 
 # --------------- ImageNet normalisation statistics ----------------------------
 IMAGENET_MEAN: list[float] = [0.485, 0.456, 0.406]
