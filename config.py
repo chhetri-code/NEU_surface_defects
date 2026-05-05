@@ -2,7 +2,7 @@
 # config.py  –  Central configuration for the NEU Surface Defect Classifier app
 # ──────────────────────────────────────────────────────────────────────────────
 
-# --------------- Model input dimensions (must match training) -----------------
+# --------------- Model input dimensions (must match training!) -----------------
 IMG_HEIGHT: int = 200
 IMG_WIDTH:  int = 200
 
