@@ -1,6 +1,6 @@
 # NEU Surface Defect Classifier — Streamlit App
 
-A minimal, production-ready Streamlit app that classifies steel surface defects
+A production-ready Streamlit app that classifies steel surface defects
 from the [NEU Surface Defect Dataset](http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html)
 into **6 categories**:
 
@@ -20,7 +20,7 @@ into **6 categories**:
 ```
 neu_defect_classifier/
 ├── app.py                 # Streamlit entry point
-├── config.py              # All constants in one place
+├── config.py              
 ├── requirements.txt
 ├── model/
 │   ├── __init__.py
@@ -33,19 +33,15 @@ neu_defect_classifier/
 
 ---
 
-## Step 1 — Save the trained model from your notebook
-
-After training in the notebook, add this single line at the end:
+## Step 1: Trained model from experimental notebook
 
 ```python
 model.save("neu_defect_model.keras")
 ```
 
-Then copy `neu_defect_model.keras` into this project folder (alongside `app.py`).
-
 ---
 
-## Step 2 — Install dependencies
+## Step 2: Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -53,13 +49,13 @@ pip install -r requirements.txt
 
 ---
 
-## Step 3 — Run the app
+## Step 3: Run the app
 
 ```bash
 streamlit run app.py
 ```
 
-Open [http://localhost:8501](http://localhost:8501) in your browser.
+Open [http://localhost:8501](http://localhost:8501)
 
 ---
 
@@ -67,11 +63,11 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 The app provides two input methods:
 
-- **📁 Upload Image** — drag-and-drop or browse for a `.jpg`, `.png`, `.bmp`, or `.webp` file.
-- **📷 Capture from Camera** — take a live photo directly in the browser.
+- **📁 Upload Image** : drag-and-drop or browse for a `.jpg`, `.png`, `.bmp`, or `.webp` file.
+- **📷 Capture from Camera** : take a live photo directly.
 
-Once an image is provided, the app:
-1. Resizes it to 200 × 200 px (matching training resolution).
+Once an image is in, the app:
+1. Resizes it to 200 × 200 px (training resolution).
 2. Converts it to RGB.
 3. Runs MobileNetV2 inference (normalisation is applied inside the model).
 4. Displays the **top predicted class** with its confidence score, plus a
@@ -81,14 +77,14 @@ Once an image is provided, the app:
 
 ## Configuration
 
-All tuneable constants live in `config.py`:
+All tuneable constants in `config.py`:
 
 | Constant | Default | Purpose |
 |---|---|---|
 | `IMG_HEIGHT` / `IMG_WIDTH` | 200 | Model input resolution |
 | `CLASS_NAMES` | (6 classes) | Label list in alphabetical/folder order |
 | `MODEL_PATH` | `neu_defect_model.keras` | Path to the saved model |
-| `TOP_K` | 3 | How many predictions to display |
+| `TOP_K` | 3 | Predictions to display |
 
 ---
 
